@@ -9,6 +9,7 @@ import Experience from './components/Experience'
 import Contact from './components/Contact'
 
 const sections = [
+  {id: "home", name: "/home/leul", onhaver: "Home", href: "/"},
   { id: 'background', name: 'bg-interesting-999', onhaver: "Background", items: [
     { id: 'academic', name: 'Academics' },
     { id: 'certifications', name: 'Certifications' },
@@ -25,8 +26,17 @@ const sections = [
     { id: 'lala-agent', name: 'lala-agent' },
     { id: 'go-quick', name: 'go-quick' }
   ]},
-  { id: 'experience', name: 'experience', items: []},
-  { id: 'contact', name: 'contact', items: []},
+  { id: 'experience', name: 'ex', onhaver: "experience", items: [
+    {id: "zergaw", name: "Internship" },
+    {id: "work", name: "Work" },
+  ]},
+  { id: 'future', name: 'time > Date.present() ', onhaver: "Future", items: [
+    { id: 'lalagrad', name: 'lalagrad' },
+    { id: 'os101', name: 'os101' },
+    { id: 'lala-agent', name: 'lala-agent' },
+    { id: 'go-quick', name: 'go-quick' }
+  ]},
+  { id: 'contact', name: 'contact', onhaver: "Contact Leul", href: "/contact"},
 ]
 
 function App() {
@@ -42,8 +52,7 @@ function App() {
         <article className="flex-1 h-screen w-full overflow-y-auto lg:pl-0">
           <div className="max-w-3xl p-2 px-4">
             <Routes>
-              <Route path="/" element={<Navigate to="/home" replace />} />
-              <Route path="/home" element={<Hero />} />
+              <Route path="/" element={<Hero />} />
               <Route path="/background" element={<Background />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/projects" element={<Projects />} />

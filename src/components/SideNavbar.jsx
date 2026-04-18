@@ -23,14 +23,6 @@ export default function SideNavbar({ sections, isOpen, onClose }) {
       </div>
       
       <nav className="p-3 flex flex-col gap-4">
-        <NavLink 
-          to="/home" 
-          className="text-muted hover:text-text hover:underline transition-all duration-200"
-          onClick={onClose}
-        >
-          /home/leul
-        </NavLink>
-
         {sections.map((section) => (
           <div 
             key={section.id} 
@@ -38,7 +30,7 @@ export default function SideNavbar({ sections, isOpen, onClose }) {
             onMouseEnter={() => section.items.length > 0 && setHoveredSection(section.id)}
             onMouseLeave={() => setHoveredSection(null)}
           >
-            {section.items.length > 0 ? (
+            {section.items ? (
               <>
                 <span 
                   className={`transition-all duration-200 ${
@@ -63,11 +55,14 @@ export default function SideNavbar({ sections, isOpen, onClose }) {
               </>
             ) : (
               <NavLink
-                to={`/${section.id}`}
-                className="text-muted hover:text-text hover:underline transition-all duration-200"
+                to={`${section.href}`}
+                className={`transition-all duration-200 ${
+                    hoveredSection === section.id ? 'pl-4 text-text' : 'text-muted'
+                  }`}
                 onClick={onClose}
+                onMouseEnter={()=>setHoveredSection(section.id)}
               >
-                {section.name}
+                {hoveredSection===section.id? section.onhaver: section.name}
               </NavLink>
             )}
           </div>
