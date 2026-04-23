@@ -16,7 +16,3 @@ echo "Done\npushing to gihub pages (gh-pages branch)"
 git add .
 git commit -m "new updates"
 git push origin gh-pages"gh-pages
-
-echo "Done\nSwitching back to master"
-git checkout master
-echo "All Tasks are done"
