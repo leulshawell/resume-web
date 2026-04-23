@@ -11,8 +11,7 @@ mv dist ../dist22
 
 echo "Done\nmoving new build to gh-pages"
 git switch gn-pages
-cp ../dist22/* .
-rm ../dist22 -rf
+mv ../dist22/* .
 
 ls
 echo "Done\npushing to gihub pages (gh-pages branch)"
