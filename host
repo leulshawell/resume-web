@@ -7,7 +7,7 @@ git push origin master:master
 
 echo "Done\mBuilding updates...."
 npm run build
-mv dist ./dist22
+mv dist ../dist22
 
 echo "Done\nmoving new build to gh-pages"
 git switch gn-pages
