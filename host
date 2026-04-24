@@ -10,7 +10,7 @@ npm run build
 mv dist ../dist22
 
 echo "Done\nmoving new build to gh-pages"
-git switch gj-pages
+git switch gh-pages
 mv ../dist22/* .
 
 ls
