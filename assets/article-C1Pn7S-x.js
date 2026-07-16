@@ -1,1 +1,0 @@
-import{j as s}from"./index-BlPCMczn.js";const d=({children:e,title:t,href:i,id:r,description:x})=>s.jsxs("div",{id:r,children:[s.jsxs("div",{children:[s.jsx("span",{children:t}),s.jsx("p",{className:"text-muted text-xs",children:x})]}),s.jsx("p",{className:"text-sm mt-3 border-l px-2",children:e})]});export{d as A};
